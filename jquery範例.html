@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>網站介面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #555;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        section {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>網站標題</h1>
+    </header>
+
+    <nav>
+        <a href="#home">首頁</a>
+        <a href="#about">關於我們</a>
+        <a href="#services">服務</a>
+        <a href="#contact">聯絡我們</a>
+    </nav>
+
+    <section>
+        <!-- 這裡將用於插入模板生成的內容 -->
+    </section>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.3.2.min.js"></script>
+    <script id="content-template" type="text/x-jquery-tmpl">
+        <!-- 這裡放置模板內容，可以根據需要自行擴充 -->
+        <h2>${title}</h2>
+        <p>${content}</p>
+    </script>
+    <script>
+        // 這裡可以使用JavaScript/jQuery代碼來操作模板，例如：
+        var data = {
+            title: "歡迎來到我們的網站",
+            content: "這是我們的首頁內容。歡迎探索！"
+        };
+
+        // 使用模板生成內容並插入到section元素中
+        $("#content-template").tmpl(data).appendTo("section");
+    </script>
+
+</body>
+</html>
